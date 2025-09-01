@@ -1,3 +1,5 @@
+
+
 # RedisDemo
 Spring Boot Product Search API with Redis Caching .🔹 Problem Without Cache  Every time a user searches for a product (e.g., "Best Pizza"), the request goes to the database (MySQL). This is slow if many users repeat the same query.With Cache We use Redis (an in-memory database) to temporarily store frequently requested data.
 
@@ -24,4 +26,23 @@ spring.data.redis.port=6379
 4.If you want to remove the old one and create new=>docker rm -f my-redis
 4.To run=>docker run --name my-redis -d -p 6379:6379 redis
 5.Run redis-cli inside container=>docker exec -it my-redis redis-cli
- 
+
+
+# 1. Check running containers
+docker ps  
+
+# 2. Check all containers (including stopped ones)
+docker ps -a  
+
+# 3. Start the existing one
+docker start my-redis  
+
+# 4. Remove the old one and create new
+docker rm -f my-redis  
+
+# 5. Run a new Redis container
+docker run --name my-redis -d -p 6379:6379 redis  
+
+# 6. Run redis-cli inside container
+docker exec -it my-redis redis-cli  
+
